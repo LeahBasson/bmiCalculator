@@ -1,8 +1,17 @@
-function result() {
-    let numb1 = document.querySelector('[numb1]').value 
-    let operator = document.querySelector('[operator]').value 
-    let numb2 = document.querySelector('[numb2]').value
-   // Output reference
-    let output = document.querySelector('[output]')
-    output.textContent = eval(`${numb1} ${operator} ${numb2}`) 
-}
+let result = document.querySelector(`[result]`)
+result.addEventListener('click', () => 
+{
+
+    let weight = document.querySelector('[weight]').value 
+    let height = document.querySelector('[height]').value
+
+    let bmi = (weight / ((height*height)/10000)).toFixed(2);
+
+    console.log(bmi);
+
+    document.querySelector(`[output]`).innerHTML= bmi;
+
+})
+
+
+
