@@ -1,9 +1,9 @@
-let result = document.querySelector(`[result]`)
-result.addEventListener('click', () => 
+let result = document.querySelector(`[result]`);
+result.addEventListener('click', (event ) => 
 {
-
-    let weight = document.querySelector('[weight]').value 
-    let height = document.querySelector('[height]').value
+    // event.preventDefault()
+    let weight = +document.querySelector('[weight]').value; 
+    let height = +document.querySelector('[height]').value;
 
     let bmi = (weight / ((height*height)/10000)).toFixed(2);
 
@@ -20,6 +20,10 @@ result.addEventListener('click', () =>
         document.querySelector(`[output]`).innerHTML = 'Obese : ' + bmi;  
     }
 
+})
+
+document.querySelector('[clear]').addEventListener('click', ()=>{
+    document.querySelector('[output]').textContent = ""
 })
 
 
