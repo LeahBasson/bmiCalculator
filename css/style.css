@@ -54,3 +54,14 @@ button:hover{
     background-color: rgb(141, 41, 141);
 }
 
+/* Media query */
+@media (width < 999px){
+ .wrapper{
+    width: 16rem;
+ }
+
+ input{
+    padding: 10px 20px;
+ }
+    
+}
